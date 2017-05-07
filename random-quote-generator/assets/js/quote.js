@@ -4,7 +4,6 @@
   var quoteBtn = document.getElementById('quotebtn');
   var tweetBtn = document.getElementById('tweetbtn');
 
-
   quoteBtn.addEventListener('click', function() {
     var ourRequest = new XMLHttpRequest();
 
@@ -30,10 +29,6 @@
         ajaxText = '"' + data.quote + '" -' + data.author;
         quoteBox.innerHTML = '"' + data.quote + '"' + '<br><br> - ' + data.author;
       }
-
-
-
-
 
       tweetBtn.addEventListener('click', tweetTweet);
       // TWEETING
