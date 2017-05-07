@@ -1,0 +1,94 @@
+/*
+font-family: 'Inknut Antiqua', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Amatic SC', cursive;
+*/
+.border {
+  border: 1px solid black;
+}
+#body {
+  background-color: #FCFCF4;
+}
+.background {
+  position: absolute;
+  text-align: center;
+  background-color: #262626;
+  border: 20px solid #2f4550;
+  border-radius: 5px;
+  top: 100px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  max-width: 900px;
+  padding: 20px 10px 10px 20px !important;
+}
+.quotecontainer {
+  position: relative;
+  text-align: center;
+  margin-top: 5% !important;
+}
+.header {
+  border-bottom: 2px solid white;
+  font-family: 'Inknut Antiqua', serif;
+  display: inline-block;
+  color: #fffaff;
+  letter-spacing: 1px;
+}
+#quote {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  color: #fffaff;
+  font-size: 21px;
+  max-width: 700px;
+  padding: 0 10px 50px 20px;
+}
+.btncontainer {
+  position: relative;
+  text-align: center;
+}
+#quotebtn {
+  font-family: 'Amatic SC', cursive;
+  display: inline-block;
+  border: 4px solid #2f4550;
+  background-color: #263238;
+  border-radius: 3%;
+  color: white;
+  font-size: 30px;
+  max-width: 700px;
+  margin: 20px;
+  padding: 5px 20px 5px 20px;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+#quotebtn:hover {
+  border-color: #263238;
+}
+#tweetbtn {
+  font-family: 'Amatic SC', cursive;
+  display: inline-block;
+  border: 4px solid #2f4550;
+  background-color: #3e92cc;
+  border-radius: 3%;
+  color: white;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 5px 20px 5px 25px;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+#tweetbtn:hover {
+  border-color: #3e92cc;
+}
+#tweetbtn i {
+  padding-left: 7px;
+  color: white;
+}
+.aboutme {
+  font-family: 'Montserrat', sans-serif;
+  text-align: right;
+  font-size: 12.9px;
+  color: #fffaff;
+  margin-top: 40px;
+  line-height: 20px;
+}
