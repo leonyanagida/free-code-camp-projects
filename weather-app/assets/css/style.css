@@ -1,0 +1,252 @@
+.border {
+  border: 1px solid black;
+}
+.centered {
+  text-align: center;
+}
+/*
+font-family: 'Poiret One', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Varela Round', sans-serif;
+*/
+#body {
+  background: url(../images/background5.jpg) no-repeat center fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.contbackground {
+  padding-top: 10px;
+  background-color: rgba(47,69,80,0.85);
+}
+.container {
+  max-width: 700px;
+}
+.weathertxt {
+  margin-top: 20px;
+  margin-left: 45px;
+}
+#weatherheader {
+
+}
+#weatherheader h1 {
+  font-family: 'Pacifico', cursive;
+  display: inline-block;
+  color: #f4f1de;
+  letter-spacing: 3px;
+}
+.cloudicon {
+  margin-left: 10px;
+  margin-top: -25px;
+  padding-bottom: 10px;
+
+  animation: sideSlide 2s forwards;
+  animation-delay: 1s;
+  opacity: 1;
+}
+@media screen and (max-width: 430px) {
+  .cloudicon { animation: none; display: none; }
+  #weatherheader { text-align: center; }
+}
+@keyframes sideSlide {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0px); opacity: 1; }
+}
+.righttop {
+  margin-top: 40px;
+  color: white;
+}
+.location {
+  text-align: center;
+}
+#usercity {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  color: #f4f1de;
+  list-style-type: none;
+}
+#usercountry {
+  display: inline-block;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  color: #f4f1de;
+  padding-left: 15px;
+  padding-right: 15px;
+  list-style-type: none;
+}
+/* FOR DEGREES */
+.f {}
+/* FOR DEGREES */
+#temperature {
+  font-family: 'Poiret One', cursive;
+  color: #fffaff;
+  font-size: 100px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-left: 40px;
+}
+#currentweather {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+#currentweatherdesc {
+  display: inline-block;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 2px;
+  border-top: 2px solid white;
+}
+#humidity {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+#windspeed {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+#pressure {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+#weathericon {
+  width: 90px;
+  height: 80px;
+}
+.describe {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 21px;
+  padding-top: 25px;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.describe2 {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 21px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+.windspeedtxt {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 21px;
+  padding-top: 25px;
+  letter-spacing: 2px;
+  display: inline-block;
+  border-bottom: 2px solid white;
+}
+.humidtxt {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 21px;
+  padding-top: 25px;
+  letter-spacing: 2px;
+  display: inline-block;
+  border-bottom: 2px solid white;
+}
+@media screen and (max-width: 992px) {
+  .humidtxt { margin-top: -25px; }
+}
+.pressuretxt {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 25px;
+  padding-top: 25px;
+  letter-spacing: 2px;
+  display: inline-block;
+  border-bottom: 2px solid white;
+}
+.btmborder {
+  border-bottom: 2px solid white;
+}
+.btmborderinblock {
+  border-bottom: 2px solid white;
+  display: inline-block;
+}
+#convert {
+  border-bottom: 1px solid white;
+  color: white;
+  float: right;
+  transition: 0.2s;
+}
+#convert:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+#convert span {
+  font-size: 20px;
+}
+#searchbar {
+  margin-bottom: 20px;
+}
+form {
+  background-color: rgba(211,211,211,0.7);
+  text-align: center;
+  height: 60px;
+  padding-bottom: 20px;
+}
+#userinput {
+  border: 1px solid gray;
+  background-color: rgba(211,211,211,0.1);
+  font-size: 18px;
+  height: 49px;
+  width: 450px;
+  max-width: 500px;
+  margin-top: 5px;
+  padding: 5px 47px 0 10px;
+}
+@media screen and (max-width: 500px) {
+  #userinput { width: 250px; }
+}
+@media screen and (max-width: 320px) {
+  #userinput { width: 150px; }
+}
+#searchbtn {
+  position: relative;
+  display: inline-block;
+  font-size: 32px;
+  color: #3d405b;
+  margin-left: -40px;
+}
+#searchbtn:hover {
+  cursor: pointer;
+}
+.creator {
+font-family: 'Poiret One', cursive;
+text-align: right;
+color: white;
+font-size: 17px;
+display: block;
+margin-top: 10px;
+letter-spacing: 1px;
+}
