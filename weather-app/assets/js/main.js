@@ -11,23 +11,41 @@
   var windSpeed = document.getElementById('windspeed');
   var pressure = document.getElementById('pressure');
 
-  searchBtn.addEventListener('click', function() {
+  /*
+  function checkSubmit(e) {
+   if(e && e.keyCode == 13) {
+            
+   }
+  }
+  */
+    document.addEventListener("keydown", enterKey, false);
+    searchBtn.addEventListener('click', function() {
+    searchWeather();
+  });
+  function enterKey(event) {
+    if(event.keyCode == '13') {
+      event.preventDefault();
+      searchWeather();
+    }
+  }
+
+    function searchWeather() {
     var userInput = document.getElementById('userinput').value;
-    console.log(userInput);
+    //console.log(userInput);
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=' + userInput + '&units=metric&appid=6d33d2d4d045a5c858de382413ac0a35');
     ourRequest.onload = function() {
       if (ourRequest.status >= 200 && ourRequest.status < 400) {
         var ourData = JSON.parse(ourRequest.responseText);
         convertHTML(ourData);
-        console.log(ourData);
+        //console.log(ourData);
       } else {
-        displayWeather.innerHTML = "Please put in a valid city!";
-        console.log("ERROR!");
+        // console.log("ERROR!");
+        return alert("Please put in a valid city!");
       }
     };
       ourRequest.send();
-  });
+  };
     var temps;
     function celToFah(temp) {
       temps = 0;
@@ -61,15 +79,15 @@
     //newString("light rain");
     //console.log(newString("light rain"))
     function convertHTML(data) {
-      console.log(data.name);
-      console.log(data.sys['country']);
-      console.log(data.main['temp']);
-      console.log(data.main['humidity']);
-      console.log(data.main['pressure']);
-      console.log(data.weather[0]['icon']); // + '.png'
-      console.log(data.weather[0]['main']);  /* CLOUDS */
-      console.log(data.weather[0]['description']); /* LIGHT RIGHT */
-      console.log(data.wind['speed']);
+    //console.log(data.name);
+    //console.log(data.sys['country']);
+    //console.log(data.main['temp']);
+    //console.log(data.main['humidity']);
+    //console.log(data.main['pressure']);
+    //console.log(data.weather[0]['icon']); // + '.png'
+    //console.log(data.weather[0]['main']);  /* CLOUDS */
+    //console.log(data.weather[0]['description']); /* LIGHT RIGHT */
+    //console.log(data.wind['speed']);
 
       cityName.innerHTML = data.name;
       countryName.innerHTML = "";
