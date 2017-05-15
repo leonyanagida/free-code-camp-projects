@@ -8,15 +8,16 @@
 .centered {
   text-align: center;
 }
+.hide{
+	display: none !important;
+}
 /* DEFAULTS */
-
 /* FONTS */
 /*
 font-family: 'Lato', sans-serif;
 font-family: 'Lilita One', cursive;
 font-family: 'Righteous', cursive;
 */
-
 .twitchapp {
   margin-top: 5vw;
 }
@@ -35,14 +36,22 @@ font-family: 'Righteous', cursive;
 @media screen and (max-width: 500px) {
   .header h1 { padding-left: 45px; }
   .twitchapp { margin-top: 0; }
+  .username h2 { font-size: 25px; }
+}
+@media screen and (max-width: 320px) {
+  .header h1 { font-size: 35px; }
+}
+@media screen and (max-width: 430px) {
+  .username h2 {
+    font-size: 20px;
+    margin-left: 49px !important;
+   }
+  .desc { margin-left: 14px; }
 }
 .twitchlogo {
   width: 40px;
   height: 40px;
   margin-top: -50px;
-}
-@media screen and (max-width: 320px) {
-  .header h1 { font-size: 35px; }
 }
 .defaultimg {
   color: black;
@@ -65,7 +74,6 @@ body {
   text-align: center;
   padding-bottom: -1px !important;
   margin-bottom: 0 !important;
-  border-bottom: 2px solid 3d405b !important;
 }
 /* NAV BAR BUTTONS */
 #navlist {
@@ -79,7 +87,7 @@ body {
   margin-left: -10px;
   margin-bottom: 0 !important;
 }
-#livebtn, #navsearch{
+#livebtn, #onlinebtn, #offlinebtn{
   text-align: center;
   border: none;
   background-color: #282b2d;
@@ -93,8 +101,17 @@ body {
 #livebtn {
   padding-right: 30px;
 }
-#navsearch {
+#onlinebtn {
   border-left: 1px solid white;
+}
+#offlinebtn {
+  border-left: 1px solid white;
+}
+@media screen and (max-width: 475px) {
+  #livebtn, #onlinebtn, #offlinebtn {
+    font-size: 15px;
+    width: 120px;
+  }
 }
 /* SEARCH BTN */
 form {
@@ -129,12 +146,12 @@ form {
 }
 .online {
   position: relative;
-  background-color: #815fc0;
+  background-color: #59DE67;
   color: black;
-  padding: 6px 0 27px 0;
+  padding: 0 6px 8px 5px;
   text-decoration: none;
   list-style-type: none;
-  border-bottom: 1px solid #f4f4f9;
+  border-bottom: 1px solid green;
 
   transition: 0.2s;
 }
@@ -145,12 +162,17 @@ form {
 a:hover {
   text-decoration: none !important;
 }
+/* CHANNEL IMG */
 .channelimg {
-  width: 112px;
-  height: 112px;
-  margin: -6px 0 5px 6px;
+  width: 80px;
+  height: 80px;
+  margin: -23px 0 24px 30px;
   border-radius: 50%;
   border: 4px solid #2f4550;
+}
+@media screen and (max-width: 360px) {
+  .channelimg { margin: -23px 0 24px 5px; }
+  .desc { margin: -92px 2px 0 80px !important; }
 }
 .fa-circle {
   float: right;
@@ -159,7 +181,7 @@ a:hover {
 }
 .desc {
   margin: -92px 27px 0 116px;
-  padding: 0 10px 26px 18px;
+  padding: 0 21px 26px 18px;
   font-family: 'Righteous', cursive;
 }
 .currentstatus {
@@ -188,12 +210,12 @@ a:hover {
 }
 .offline {
   position: relative;
-  background-color: #d3d3d3;
+  background-color: #EC6363;
   color: black;
   text-decoration: none;
   list-style-type: none;
-  padding: 6px 0 27px 0;
-  border-bottom: 1px solid white;
+  padding: 6px 6px 27px 5px;
+  border-bottom: 1px solid #6B0808;
 
   transition: 0.3s;
 }
@@ -205,16 +227,22 @@ a:hover {
 .offlinestatus {
   display: inline-block;
   font-family: 'Lato', sans-serif;
-  margin-left: 48px;
+  margin-left: 60px;
   font-size: 18px;
 }
 @media screen and (max-width: 440px) {
-  .offlinestatus { margin-left: 14px }
+  .offlinestatus {
+    margin-left: 14px;
+    font-size: 15px;
+   }
+   .channelimgoffline {
+     margin: -12px 0 5px 5px !important;
+   }
 }
 .channelimgoffline {
-  width: 112px;
-  height: 112px;
-  margin: 8px 0 5px 6px;
+  width: 80px;
+  height: 80px;
+  margin: -23px 0 24px 30px;
   border-radius: 50%;
   border: 4px solid #2f4550;
 }
