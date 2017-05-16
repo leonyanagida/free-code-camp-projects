@@ -1,7 +1,6 @@
 
 
 (function() {
-
   var xhr = new XMLHttpRequest();
   var searchBtn = document.getElementById('searchbtn');
   var results = document.getElementById('results');
@@ -11,13 +10,11 @@
   var myQuotes = document.getElementById('myquotes');
   var wordArray = ['Five page essay due tomorrow? Wikipedia it!', 'With great power, comes great responsibility.', 'Wikipedia, still more credible than the media.', 'Have you ever "Wiki Searched" yourself?', 'Breaking News: Wikipedia has found Waldo.', 'Can Wikipedia teach me how to cook?'];
   var arraySelector = Math.floor(Math.random() * 6);
-
   function headerQuote() {
     myQuotes.innerHTML = wordArray[arraySelector];
     //console.log(arraySelector);
   }
   headerQuote();
-
   document.addEventListener("keydown", enterKey, false);
   searchBtn.addEventListener('click', function() {
     wikiSearch();
@@ -28,7 +25,6 @@
       wikiSearch();
     }
   }
-
   function wikiSearch() {
     if(userInput.value == "") {
       return errorTxt.innerHTML = "Please type something in the search bar.";
@@ -49,14 +45,15 @@
     xhr.open('GET', url, true);
     xhr.send();
   }
-
   function convertHTML(data) {
     results.innerHTML = " ";
     for (var i = 0; i < data.query.search.length; i++) {
       var listItem = document.createElement('li');
       var aHref = "https://en.wikipedia.org/wiki/" + escape(data.query.search[i].title);
+      function hasClass(el, cls) {
+        return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
+      }
         results.appendChild(listItem).innerHTML = "<a target='_blank' href='" + aHref + "'>" + data.query.search[i].title + "<br><br>" + data.query.search[i].snippet + "... " + ' <i class="fa fa-external-link" aria-hidden="true"></i>' + "</a>";
       }
     }
-
 })();

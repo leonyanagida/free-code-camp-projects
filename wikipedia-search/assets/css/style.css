@@ -101,8 +101,15 @@ font-family: 'Josefin Sans', sans-serif;
   position: relative;
   background-color: #2A282D;
   margin: auto;
-  width: 60%;
+  width: 90%;
   max-width: 900px;
+}
+.searchmatch {
+  width: 10px;
+}
+/* PREVENTS OVERFLOW OF TEXT */
+.searchmatch::before {
+  content: "\A";
 }
 #results {
   background-color: #323537;
@@ -154,8 +161,8 @@ font-family: 'Josefin Sans', sans-serif;
   color: #d3d3d3;
 }
 @media screen and (max-width: 530px) {
-  #results a { font-size: 16px;}
-  #results li { width: 100%; }
+  #results a { font-size: 16px; max-width: 50px; }
+  #results li { font-size: 12px; }
 }
 .searchtitle {
   background-color: red;
