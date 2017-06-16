@@ -11,6 +11,3 @@ http://littlejohngil-miniwikipedia.surge.sh
 
 Find the twitch status of streamers ( API Request ):
 http://littlejohngil-twitchapp.surge.sh
-
-Watch your favorite actors on Netflix ( API ):
-littlejohngil-actorsonnetflix.surge.sh
