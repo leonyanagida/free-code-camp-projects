@@ -57,6 +57,7 @@ font-family: 'Josefin Sans', sans-serif;
 .formcont {
   text-align: center;
   background-color: #323537;
+  padding-bottom: 15px;
 }
 #errortxt {
   font-family: 'Josefin Sans', sans-serif;
