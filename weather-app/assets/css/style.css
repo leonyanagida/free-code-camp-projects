@@ -18,7 +18,7 @@ font-family: 'Varela Round', sans-serif;
   height: 100vh;
 }
 .contbackground {
-  padding-top: 10px;
+  padding-top: 5px;
   background-color: rgba(47,69,80,0.85);
 }
 .container {

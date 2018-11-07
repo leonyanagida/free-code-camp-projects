@@ -4,10 +4,10 @@ Projects from FreeCodeCamp
 Links to all live sites:
 
 Search local weather ( API Request ):
-http://littlejohngil-weatherapp.surge.sh
+http://leonyanagida-weatherapp.surge.sh
 
 Search for anything on wikipedia ( API Request ):
-http://littlejohngil-miniwikipedia.surge.sh
+http://leon-wikipedia-app.surge.sh
 
 Find the twitch status of streamers ( API Request ):
-http://littlejohngil-twitchapp.surge.sh
+http://leon-twitch-app.surge.sh/

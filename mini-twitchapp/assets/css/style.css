@@ -130,7 +130,7 @@ form {
   background-color: transparent;
   color: gray;
   font-size: 21px;
-  margin-left: -37px;
+  margin-left: -42px !important;
   padding-bottom: 5px;
 }
 #notification {
